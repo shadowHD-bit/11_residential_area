@@ -1,0 +1,101 @@
+.lazy {
+  width: auto;
+  height: auto;
+
+  .lazy_container {
+    padding: 0px 132px;
+
+    .lazy_content {
+      width: 100%;
+      height: auto;
+      height: 600px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .lazy_numbers {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        
+        .lazy_video_content{
+            background-color: black;
+            width: 450px;
+            height: 400px;
+            margin-right: 50px;
+            clip-path: polygon(79.87% 0.00%,100.00% 0.00%,100.00% 100%,76.90% 100%,76.53% 23.90%,59.31% 23.92%,59.61% 0.00%,42.75% 0.00%,43.06% 100%,20.37% 100%,20.05% 24.13%,0.00% 24.04%,0.00% 0.00%);
+        
+            .lazy_video_forest{
+                width: auto;
+                height: auto;
+            }
+        }
+      }
+
+      .lazy_description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50%;
+
+
+        .lazy_title {
+          height: auto;
+          padding-bottom: 20px;
+            width: 100%;
+
+          .lazy_title_text {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 64px;
+            line-height: 90%;
+            letter-spacing: 0.0703846px;
+            color: #1d1f1d;
+            mix-blend-mode: normal;
+            max-width: 530px;
+          }
+        }
+
+        .lazy_subtitle {
+          padding-bottom: 40px;
+          width: 100%;
+
+          .lazy_subtitle_text {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0.1px;
+            color: #1d1f1d;
+          }
+        }
+
+        .lazy_btn {
+          width: 100%;
+          padding: 20px 0px;
+
+          .lazy_area_btn {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 90%;
+            letter-spacing: 0.0703846px;
+            color: #1d1f1d;
+            padding: 23px 40px;
+            border: 1px solid #1d1f1d;
+            border-radius: 30px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
