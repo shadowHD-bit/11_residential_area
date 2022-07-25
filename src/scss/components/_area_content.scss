@@ -15,7 +15,6 @@
     margin-top: 500px;
     bottom: 0;
 
-
     .parallax_fog {
       background-image: url("assets/fog_1.png");
       background-size: cover;
@@ -150,6 +149,8 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        position: relative;
+        z-index: 10;
 
         .distance_content {
           .distance_content_text {
@@ -189,6 +190,53 @@
     width: auto;
     height: auto;
     position: relative;
+    overflow: hidden;
+
+    .parallax_fug_anim {
+      position: absolute;
+      opacity: 0.3;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      animation: parallax_fog 40s linear infinite;
+      background-image: url("assets/fog_2.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @keyframes parallax_fog {
+      0% {
+        background-position: -4200px;
+      }
+      100% {
+        background-position: 5560px;
+      }
+    }
+
+    .parallax_fug_anim_second {
+      opacity: 0.2;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      animation: parallax_fog_second 40s linear infinite;
+      background-image: url("assets/fog_3.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @keyframes parallax_fog_second {
+      0% {
+        background-position: 4200px;
+      }
+      100% {
+        background-position: -5560px;
+      }
+    }
 
     .down_section_content {
       padding: 0px 132px;
@@ -198,35 +246,80 @@
       background-image: url("assets/bg2.png");
       height: 1600px;
 
-      .area_content_house{
+      .area_content_house {
         width: 100%;
         height: 100%;
 
-        #main_frame{
-            margin-top: 150px;
-            position: relative;
-            z-index: 9;
+        #main_frame {
+          margin-top: 150px;
+          position: relative;
+          z-index: 9;
 
-            .main_area{
-                pointer-events:none;
-                fill: none;
+          .main_area {
+            pointer-events: none;
+            fill: none;
 
-                &:hover{
-                    fill: none; 
-                }
+            &:hover {
+              fill: none;
             }
+          }
 
-            .area_chose{
-                fill: white;
-                fill-opacity: 0.2;
-                pointer-events:all;
-                cursor: pointer;
-                &:hover{
-                    fill: black; 
-                }
+          .area_chose {
+            fill: white;
+            fill-opacity: 0.2;
+            pointer-events: all;
+            cursor: pointer;
+            &:hover {
+              fill: black;
             }
+          }
         }
       }
+    }
+  }
+}
+.areas_info_title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #f8f8f8;
+  margin-bottom: 30px;
+
+}
+
+.areas_info_block {
+  display: flex;
+  flex-direction: column;
+
+  .areas_info_block_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6px;
+
+
+    .areas_info_block_item_title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 15px;
+      color: #f8f8f8;
+      display: block;
+    }
+
+    .areas_info_block_item_nums {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: right;
+      color: #f8f8f8;
+      display: block;
+
     }
   }
 }
