@@ -1,5 +1,4 @@
 .popup.open {
-  opacity: 1;
   visibility: visible;
   position: fixed;
   width: 100%;
@@ -7,7 +6,20 @@
   background-color: rgba(0, 0, 0, 0.151);
   left: 0;
   top: 0;
+  opacity: 1;
+  animation: popup_open 1s;
+  z-index: 99;
 }
+
+@keyframes popup_open {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 
 .popup {
   opacity: 0;
@@ -19,6 +31,7 @@
   left: 0;
   top: 0;
 }
+
 
 .popup__body {
   min-height: 100%;
@@ -35,6 +48,7 @@
     flex-direction: column;
     position: relative;
     z-index: 99;
+
 
     .popup__section_first {
       display: flex;
