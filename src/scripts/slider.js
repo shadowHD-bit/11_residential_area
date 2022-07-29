@@ -109,9 +109,9 @@ $(document).ready(function () {
     prev_counter_slider,
     next_counter_slider
   ) {
-    let current_title = $(`#items_title_${counter_slider}`);
-    let next_title = $(`#items_title_${next_counter_slider}`);
-    let prev_title = $(`#items_title_${prev_counter_slider}`);
+    current_title = $(`#items_title_${counter_slider}`);
+    next_title = $(`#items_title_${next_counter_slider}`);
+    prev_title = $(`#items_title_${prev_counter_slider}`);
 
     text_content_title.html(`<p>${items_slider[counter_slider].title}</p>`);
     text_content_description.html(
@@ -158,6 +158,22 @@ $(document).ready(function () {
       current_slider = current_slider - 1;
       prev_slider = current_slider + 1;
       next_slider = current_slider - 2;
+    }
+    initSlider(current_slider, prev_slider, next_slider);
+  });
+
+  let items_title = $(".items_title");
+  let items_title_this_id;
+  let items_title_this_id_number;
+  items_title.click(function () {
+    items_title_this_id = $(this).attr("id");
+    items_title_this_id_number = Number(items_title_this_id.split("_")[2]);
+    prev_slider = current_slider;
+    current_slider = items_title_this_id_number;
+    if ((current_slider == items_slider.length - 1)) {
+      next_slider = 0;
+    } else {
+      next_slider = current_slider + 1;
     }
     initSlider(current_slider, prev_slider, next_slider);
   });
